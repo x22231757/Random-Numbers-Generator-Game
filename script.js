@@ -14,11 +14,13 @@ function checkNumber()
 	
 	//Add if statemnts to validate the input
 	if(userNumber<0){
+		document.getElementById("user_number").style.visibility = "hidden";
 		document.getElementById("submit_button").style.visibility = "hidden";
 		document.getElementById("content").innerHTML +="Please enter a valid integer number (0-10)";
 		document.getElementById("content").innerHTML +="<br></br><button onClick='window.location.reload()'>Play Again</button>";
 		return
 	}else if(userNumber>10){
+		document.getElementById("user_number").style.visibility = "hidden";
 		document.getElementById("submit_button").style.visibility = "hidden";
 		document.getElementById("content").innerHTML +="Please enter a valid integer number (0-10)";
 		document.getElementById("content").innerHTML +="<br></br><button onClick='window.location.reload()'>Play Again</button>";
@@ -35,6 +37,7 @@ function checkNumber()
 	}
 	
 	//Output how many time userNumber appear in the array
+	document.getElementById("user_number").style.visibility = "hidden";
 	document.getElementById("submit_button").style.visibility = "hidden";
 	document.getElementById("content").innerHTML +="Your number appears in the array " + sum + " times.";
 	document.getElementById("content").innerHTML +="<br></br><button onClick='window.location.reload()'>Play Again</button>";
